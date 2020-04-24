@@ -92,7 +92,7 @@ def predict(opt):
                 confidence_score = pred_max_prob.cumprod(dim=0)[-1]
 
                 preds_output["predicted"].append(pred)
-                preds_output["confidence"].append(confidence_score)
+                preds_output["confidence"].append(round(confidence_score.item(), 2))
 
             # write predictions
             with open(f"{opt.image_folder}/predictions.json", "w") as outfile:
