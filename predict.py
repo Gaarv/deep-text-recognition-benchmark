@@ -96,7 +96,7 @@ def predict(opt):
 
             # write predictions
             with open(f"{opt.image_folder}/predictions.json", "w") as outfile:
-                json.dumps(preds_output, outfile)
+                json.dump(preds_output, outfile)
 
 
 if __name__ == "__main__":
